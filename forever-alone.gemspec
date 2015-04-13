@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["rustam@sharshenov.com"]
   spec.summary       = "Ensure text uniqueness in period of time."
   spec.description   = "This gem uses Redis to keep a list of recent text messages. ForeverAlone calculates hex digests of message and stores them into the Redis with a given expiration period."
-  spec.homepage      = "https://github.com/sharshenov/forever-alone"
+  spec.homepage      = "https://github.com/Spalmalo/forever-alone"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
