@@ -19,7 +19,37 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+
+```ruby
+  # init ForeverAlone with default timeout(30 minutes)
+  forever_alone = ForeverAlone.new("some message")
+
+  # or with custom timeout
+  forever_alone = ForeverAlone.new("some message", 5.minutes)
+
+  # check if given message is unique
+  forever_alone.unique?
+
+  # remember this message
+  forever_alone.remember
+
+  # OR just ensure that message is unique and raise ForeverAlone::MessageIsNotUnique error otherwise
+  forever_alone.ensure
+```
+
+## Configuration
+
+Here is ForeverAlone default configuration:
+
+```ruby
+ForeverAlone.configure do |config|
+  config.digest     = Digest::MD5 # you can switch to Digest::SHA1
+  config.timeout    = 1_800       # default expiration period
+  config.namespace  = :locks      # prefix to Redis keys "locks:df49b60423903e095b80d9b4a92eb065"
+end
+```
+
+You can configure redis connection with `REDIS_URL` environment variable.
 
 ## Contributing
 
