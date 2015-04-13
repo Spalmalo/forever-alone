@@ -1,6 +1,7 @@
-# Forever::Alone
+# ForeverAlone
+[![Build Status](https://travis-ci.org/Spalmalo/forever-alone.svg)](https://travis-ci.org/Spalmalo/forever-alone)
 
-TODO: Write a gem description
+This gem uses Redis to keep a list of recent text messages. ForeverAlone calculates hex digests of message and stores them into the Redis with a given expiration period.
 
 ## Installation
 
