@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe ForeverAlone do
-  describe "#configuration" do
+  describe ".configuration" do
 
     subject { described_class.configuration }
 
