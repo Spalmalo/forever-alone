@@ -1,6 +1,8 @@
 require "digest"
 require "redis"
+require "forever-alone/errors"
 require "forever-alone/configuration"
+require "forever-alone/validator"
 require "forever-alone/version"
 
 module ForeverAlone
@@ -18,6 +20,10 @@ module ForeverAlone
 
     def redis
       @redis ||= Redis.new
+    end
+
+    def new message, timeout=nil
+      Validator.new message, timeout
     end
 
   end
