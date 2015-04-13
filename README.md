@@ -51,6 +51,15 @@ end
 
 You can configure redis connection with `REDIS_URL` environment variable.
 
+
+## Testing
+
+You can add [fakeredis](https://github.com/guilleiguaran/fakeredis) to your Gemfile to prevent ForeverAlone from making requests to your Redis server.
+```
+gem "fakeredis", require: "fakeredis/rspec", group: :test
+```
+
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/forever-alone/fork )
