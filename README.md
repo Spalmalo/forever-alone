@@ -1,4 +1,7 @@
 # ForeverAlone
+
+![forever alone](http://cdn.alltheragefaces.com/img/faces/svg/sad-forever-alone-face-only.svg)
+
 [![Build Status](https://travis-ci.org/Spalmalo/forever-alone.svg)](https://travis-ci.org/Spalmalo/forever-alone)
 
 This gem uses Redis to keep a list of recent text messages. ForeverAlone calculates hex digests of message and stores them into the Redis with a given expiration period.
@@ -53,6 +56,15 @@ end
 ```
 
 You can configure redis connection with `REDIS_URL` environment variable.
+
+
+## Testing
+
+You can add [fakeredis](https://github.com/guilleiguaran/fakeredis) to your Gemfile to prevent ForeverAlone from making requests to your Redis server.
+```
+gem "fakeredis", require: "fakeredis/rspec", group: :test
+```
+
 
 ## Contributing
 
