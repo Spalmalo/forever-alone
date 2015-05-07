@@ -12,6 +12,11 @@ module ForeverAlone
       ForeverAlone.redis.get(key).nil?
     end
 
+    def flush_locks
+      keys = ForeverAlone.redis.keys "#{ ForeverAlone.configuration.namespace }:*"
+      ForeverAlone.redis.del keys if keys.any?
+    end
+
     def remember
       ForeverAlone.redis.setex key, timeout, 'foo'
     end

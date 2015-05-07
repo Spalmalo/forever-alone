@@ -35,6 +35,9 @@ Or install it yourself as:
 
   # OR just ensure that message is unique and raise ForeverAlone::MessageIsNotUnique error otherwise
   forever_alone.ensure
+
+  # if you want to flush all locks
+  forever_alone.flush_locks
 ```
 
 ## Configuration
